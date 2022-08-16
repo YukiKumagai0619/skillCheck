@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  rust:
+    image: rust:forSkillCheck
+    build:
+      context: ./..
+      dockerfile: ./docker/Dockerfile
+    volumes:
+      - ./../conf:/skillCheck/conf
+      - ./../src:/skillCheck/src
